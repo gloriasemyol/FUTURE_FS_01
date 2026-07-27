@@ -57,7 +57,7 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 px-6 bg-violet-50/50 dark:bg-[#150c28]/50">
+    <section id="skills" className="py-24 px-6 bg-violet-50 dark:bg-[#0F0A1F] transition-colors duration-300">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-violet-600 dark:text-violet-400 font-medium mb-2 tracking-wide">
           My Tech Stack
@@ -85,7 +85,7 @@ function Skills() {
                   return (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-violet-50/60 dark:bg-[#150c28]/60 hover:scale-105 transition-transform"
+                      className="flex items-center gap-3 p-3 rounded-xl bg-violet-50 dark:bg-[#150c28] hover:scale-105 transition-transform"
                     >
                       <Icon className={`w-6 h-6 ${skill.color}`} />
                       <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
