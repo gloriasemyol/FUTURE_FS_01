@@ -4,7 +4,6 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiHtml5,
-  SiCss3,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
@@ -18,6 +17,7 @@ import {
   SiJsonwebtokens,
   SiPostman,
 } from "react-icons/si";
+import { TbBrandCss3 } from "react-icons/tb";
 
 function Skills() {
   const skillCategories = [
@@ -29,7 +29,7 @@ function Skills() {
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400" },
         { name: "Next.js", icon: SiNextdotjs, color: "text-gray-900 dark:text-white" },
         { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
-        { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+        { name: "CSS3", icon: TbBrandCss3, color: "text-blue-500" },
       ],
     },
     {
