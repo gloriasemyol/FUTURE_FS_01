@@ -27,7 +27,9 @@ function Footer() {
             <FaLinkedin size={18} />
           </a>
           <a
-            href="mailto:gloriasemyol@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=gloriasemyol@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="text-gray-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
           >
             <Mail size={18} />
