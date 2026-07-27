@@ -4,9 +4,15 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved ? JSON.parse(saved) : false;
+  });
 
   useEffect(() => {
     if (darkMode) {
@@ -14,18 +20,21 @@ function App() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   return (
-    <div>
+    <div className="transition-colors duration-300">
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero />
       <About />
       <Skills />
       <Projects />
-      {/* Resume + Contact sections coming Day 3 */}
+      <Resume />
+      <Contact />
+      <Footer />
     </div>
   );
 }
