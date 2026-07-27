@@ -14,7 +14,7 @@ function About() {
 
         <div className="space-y-5 text-left md:text-center">
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            Hi, I'm Gloria — a Full Stack Web Development intern passionate about
+            Hi, I'm Gloria S — a Full Stack Web Development intern passionate about
             building clean, functional, and user-friendly web applications. I started
             as a complete beginner and have since built multiple full-stack projects,
             including authentication systems, e-commerce platforms, real-time chat apps,
