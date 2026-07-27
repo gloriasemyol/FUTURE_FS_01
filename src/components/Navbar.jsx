@@ -22,7 +22,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
           href="#home" 
           className="text-xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent"
         >
-          Gloria.dev
+          Gloria S.dev
         </a>
 
         {/* Desktop Links */}

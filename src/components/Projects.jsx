@@ -1,7 +1,11 @@
-import { ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, X, ArrowLeft, Clock } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const projects = [
     {
       title: "FUTURE_FS_01 — Portfolio Website",
@@ -9,52 +13,61 @@ function Projects() {
         "This very portfolio! Built with React, Vite, and Tailwind CSS, featuring dark mode, smooth animations, and a purple gradient theme.",
       tech: ["React", "Vite", "Tailwind CSS"],
       github: "https://github.com/gloriasemyol/FUTURE_FS_01",
-      live: "#",
+      live: null,
     },
     {
-      title: "PRODIGY_FS_05 — Social Media Platform",
+      title: "Prodigy Projects",
       description:
-        "A full-stack social platform with JWT auth, image uploads via Cloudinary, and a PostgreSQL database managed with Prisma ORM.",
-      tech: ["React", "Node.js", "PostgreSQL", "Prisma"],
-      github: "https://github.com/gloriasemyol/PRODIGY_FS_05",
-      live: "#",
+        "A collection of full-stack web development internship tasks including authentication systems, real-time apps, and CRUD administrative dashboards.",
+      tech: ["React", "Node.js", "MongoDB", "PostgreSQL"],
+      github: "https://github.com/gloriasemyol",
+      live: null,
     },
     {
-      title: "PRODIGY_FS_04 — Real-Time Chat App",
+      title: "DocSign",
       description:
-        "A live chat application using Socket.io for real-time messaging, complete with typing indicators and JWT-based authentication.",
-      tech: ["React", "Socket.io", "MongoDB", "Node.js"],
-      github: "https://github.com/gloriasemyol/PRODIGY_FS_04",
-      live: "#",
+        "A secure digital document signing and management application with JWT authentication, cryptographic signatures, and audit trails.",
+      tech: ["React", "Node.js", "Express.js", "JWT"],
+      github: "https://github.com/gloriasemyol",
+      live: null,
     },
     {
-      title: "PRODIGY_FS_03 — Local Store E-Commerce",
+      title: "SmartERP",
       description:
-        "A bakery-themed e-commerce site with full cart functionality, checkout flow, and an animated loading experience.",
-      tech: ["React", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/gloriasemyol/PRODIGY_FS_03",
-      live: "#",
+        "An enterprise resource planning dashboard designed for managing inventory, tracking orders, and handling employee role permissions.",
+      tech: ["React", "PostgreSQL", "Prisma", "Tailwind CSS"],
+      github: "https://github.com/gloriasemyol",
+      live: null,
     },
     {
-      title: "PRODIGY_FSD_02 — Employee Management System",
+      title: "AI Code Review and Analyzer",
       description:
-        "A full CRUD admin system with JWT authentication, password hashing, and toast notifications for a smooth user experience.",
-      tech: ["React", "Node.js", "MongoDB", "JWT"],
-      github: "https://github.com/gloriasemyol/PRODIGY_FSD_02",
-      live: "#",
+        "An automated code review tool that analyzes source code for syntax errors, security vulnerabilities, and code quality recommendations.",
+      tech: ["React", "Node.js", "Express.js", "Postman"],
+      github: "https://github.com/gloriasemyol",
+      live: null,
     },
     {
-      title: "PRODIGY_FSD_01 — Secure Authentication System",
+      title: "GreenField Insight",
       description:
-        "A 14-day authentication system built with Next.js and PostgreSQL, deployed across Neon, Render, and Vercel.",
-      tech: ["Next.js", "PostgreSQL", "JWT"],
-      github: "https://github.com/gloriasemyol/PRODIGY_FSD_01",
-      live: "#",
+        "An environmental data analytics platform offering visualization tools for tracking sustainability metrics and resource distribution.",
+      tech: ["Next.js", "Tailwind CSS", "MongoDB", "Chart.js"],
+      github: "https://github.com/gloriasemyol",
+      live: null,
     },
   ];
 
+  const handleLiveDemoClick = (project) => {
+    if (!project.live || project.live === "#") {
+      setSelectedProject(project);
+      setIsModalOpen(true);
+    } else {
+      window.open(project.live, "_blank");
+    }
+  };
+
   return (
-    <section id="projects" className="py-24 px-6 bg-white dark:bg-[#0F0A1F]">
+    <section id="projects" className="py-24 px-6 bg-white dark:bg-[#0F0A1F] relative">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-violet-600 dark:text-violet-400 font-medium mb-2 tracking-wide">
           My work
@@ -100,19 +113,65 @@ function Projects() {
                   <SiGithub size={16} /> Code
                 </a>
 
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium"
+                <button
+                  type="button"
+                  onClick={() => handleLiveDemoClick(project)}
+                  className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium cursor-pointer"
                 >
                   <ExternalLink size={16} /> Live Demo
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Interactive Coming Soon Modal */}
+      {isModalOpen && selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div className="bg-white dark:bg-[#1E1433] border border-violet-200 dark:border-violet-900/50 rounded-3xl p-8 w-full max-w-lg shadow-2xl relative text-center">
+            {/* Close Icon Button */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors cursor-pointer"
+            >
+              <X size={22} />
+            </button>
+
+            {/* Status Icon */}
+            <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Clock size={32} />
+            </div>
+
+            {/* Status Badge */}
+            <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 rounded-full mb-3">
+              Status: In Progress
+            </span>
+
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              {selectedProject.title}
+            </h3>
+
+            <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+              The live interactive preview for this project is currently under deployment. Check back soon or visit the GitHub repository for full source code!
+            </p>
+
+            {/* Coming Soon Banner */}
+            <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-extrabold text-xl py-3 rounded-2xl mb-6 shadow-md shadow-violet-500/20">
+              🚀 Coming Soon!
+            </div>
+
+            {/* Back to Home / Close Button */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-gray-100 dark:bg-[#150c28] hover:bg-gray-200 dark:hover:bg-violet-900/50 text-gray-800 dark:text-gray-200 font-medium transition-colors cursor-pointer"
+            >
+              <ArrowLeft size={18} />
+              Back to Home
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
