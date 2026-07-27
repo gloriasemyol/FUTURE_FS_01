@@ -8,7 +8,7 @@ function Projects() {
 
   const projects = [
     {
-      title: "FUTURE_FS_01 — Portfolio Website",
+      title: "My Portfolio",
       description:
         "This very portfolio! Built with React, Vite, and Tailwind CSS, featuring dark mode, smooth animations, and a purple gradient theme.",
       tech: ["React", "Vite", "Tailwind CSS"],
@@ -44,14 +44,6 @@ function Projects() {
       description:
         "An automated code review tool that analyzes source code for syntax errors, security vulnerabilities, and code quality recommendations.",
       tech: ["React", "Node.js", "Express.js", "Postman"],
-      github: "https://github.com/gloriasemyol",
-      live: null,
-    },
-    {
-      title: "GreenField Insight",
-      description:
-        "An environmental data analytics platform offering visualization tools for tracking sustainability metrics and resource distribution.",
-      tech: ["Next.js", "Tailwind CSS", "MongoDB", "Chart.js"],
       github: "https://github.com/gloriasemyol",
       live: null,
     },
