@@ -1,4 +1,3 @@
-```markdown
 # 🚀 FUTURE_FS_01 — Personal Portfolio Website
 
 > An aesthetic, responsive, and modern personal portfolio website built as Task 1 for the Future Interns Full Stack Web Development Internship.
