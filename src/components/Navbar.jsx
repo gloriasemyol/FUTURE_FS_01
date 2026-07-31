@@ -20,7 +20,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
         {/* Logo */}
         <a 
           href="#home" 
-          className="text-xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent"
+          className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent"
         >
           Gloria S.dev
         </a>
@@ -31,7 +31,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+              className="text-base font-medium text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
             >
               {link.name}
             </a>
@@ -40,7 +40,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
 
         {/* Right side: Socials + Dark mode + Mobile menu */}
         <div className="flex items-center gap-4">
-          {/* GitHub Icon */}
           <a 
             href="https://github.com/gloriasemyol" 
             target="_blank" 
@@ -52,7 +51,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </svg>
           </a>
 
-          {/* LinkedIn Icon */}
           <a 
             href="https://linkedin.com/in/gloriasemyol" 
             target="_blank" 
@@ -64,7 +62,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </svg>
           </a>
 
-          {/* Dark Mode Toggle */}
           <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 hover:scale-110 transition-transform"
@@ -72,7 +69,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
-          {/* Mobile Menu Toggle */}
           <button 
             className="md:hidden text-gray-700 dark:text-gray-200" 
             onClick={() => setMenuOpen(!menuOpen)}
@@ -90,7 +86,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
               key={link.name}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 font-medium"
+              className="text-gray-700 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 font-medium text-lg"
             >
               {link.name}
             </a>

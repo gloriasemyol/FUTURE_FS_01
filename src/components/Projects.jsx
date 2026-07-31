@@ -63,10 +63,10 @@ function Projects() {
   return (
     <section id="projects" className="py-24 px-6 bg-white dark:bg-[#0F0A1F] relative">
       <div className="max-w-6xl mx-auto text-center">
-        <p className="text-violet-600 dark:text-violet-400 font-medium mb-2 tracking-wide">
+        <p className="text-violet-600 dark:text-violet-400 font-semibold text-lg mb-2 tracking-wide">
           My work
         </p>
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-14 text-gray-900 dark:text-white">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-14 text-gray-900 dark:text-white">
           Featured{" "}
           <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
             Projects
@@ -79,10 +79,10 @@ function Projects() {
               key={project.title}
               className="bg-white dark:bg-[#1E1433] rounded-2xl p-6 border border-violet-100 dark:border-violet-900/40 shadow-lg shadow-violet-100 dark:shadow-none hover:-translate-y-1 hover:shadow-xl transition-all flex flex-col"
             >
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+              <p className="text-base text-gray-600 dark:text-gray-400 mb-4 flex-grow">
                 {project.description}
               </p>
 
@@ -102,17 +102,17 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium"
+                  className="flex items-center gap-1.5 text-base text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium"
                 >
-                  <SiGithub size={16} /> Code
+                  <SiGithub size={18} /> Code
                 </a>
 
                 <button
                   type="button"
                   onClick={() => setSelectedProject(project)}
-                  className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium cursor-pointer"
+                  className="flex items-center gap-1.5 text-base text-gray-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 font-medium cursor-pointer"
                 >
-                  <ExternalLink size={16} /> Live Demo
+                  <ExternalLink size={18} /> Live Demo
                 </button>
               </div>
             </div>
@@ -135,19 +135,19 @@ function Projects() {
               onClick={() => setSelectedProject(null)}
               className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white transition-colors cursor-pointer"
             >
-              <X size={22} />
+              <X size={24} />
             </button>
 
-            {/* --- Portfolio message --- */}
+            {/* Portfolio message */}
             {selectedProject.modalType === "self" && (
               <>
                 <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Sparkles size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
                   You're looking at it right now! This very portfolio website
                   you're browsing is the live demo of this project — built
                   from scratch with React, Vite, and Tailwind CSS.
@@ -155,7 +155,7 @@ function Projects() {
               </>
             )}
 
-            {/* --- Prodigy message --- */}
+            {/* Prodigy message */}
             {selectedProject.modalType === "prodigy" && (
               <>
                 <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -164,10 +164,10 @@ function Projects() {
                 <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 rounded-full mb-3">
                   5 Projects
                 </span>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
                   These are five separate full-stack projects built during my
                   Prodigy InfoTech internship. Visit my GitHub to explore each
                   one's source code, README, and setup instructions.
@@ -177,23 +177,23 @@ function Projects() {
                   href={selectedProject.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium text-base shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
                 >
                   <SiGithub size={18} /> View on GitHub
                 </a>
               </>
             )}
 
-            {/* --- Video demo link --- */}
+            {/* Video demo link */}
             {selectedProject.modalType === "video" && (
               <>
                 <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 rounded-full flex items-center justify-center mx-auto mb-4">
                   <PlayCircle size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
                   {selectedProject.description}
                 </p>
                 
@@ -201,7 +201,7 @@ function Projects() {
                   href={selectedProject.driveLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium text-base shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
                 >
                   <PlayCircle size={18} /> Click to Watch Demo Video
                 </a>

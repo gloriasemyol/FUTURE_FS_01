@@ -59,10 +59,10 @@ function Skills() {
   return (
     <section id="skills" className="py-24 px-6 bg-violet-50 dark:bg-[#0F0A1F] transition-colors duration-300">
       <div className="max-w-6xl mx-auto text-center">
-        <p className="text-violet-600 dark:text-violet-400 font-medium mb-2 tracking-wide">
+        <p className="text-violet-600 dark:text-violet-400 font-semibold text-lg mb-2 tracking-wide">
           My Tech Stack
         </p>
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-14 text-gray-900 dark:text-white">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-14 text-gray-900 dark:text-white">
           Skills &{" "}
           <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
             Technologies
@@ -75,7 +75,7 @@ function Skills() {
               key={category.title}
               className="bg-white dark:bg-[#1E1433] rounded-2xl p-6 border border-violet-100 dark:border-violet-900/40 shadow-lg shadow-violet-100 dark:shadow-none"
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 {category.title}
               </h3>
 
@@ -88,7 +88,7 @@ function Skills() {
                       className="flex items-center gap-3 p-3 rounded-xl bg-violet-50 dark:bg-[#150c28] hover:scale-105 transition-transform"
                     >
                       <Icon className={`w-6 h-6 ${skill.color}`} />
-                      <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+                      <span className="text-base font-semibold text-gray-700 dark:text-gray-200">
                         {skill.name}
                       </span>
                     </div>
