@@ -22,6 +22,7 @@ function Projects() {
       github: "https://github.com/gloriasemyol/FUTURE_FS_02",
       modalType: "video",
       driveLink: "https://drive.google.com/open?id=1xBlNfxz2GV0UXs0JU3ng2tM-rTFQU07U&usp=drive_copy",
+      liveLink: "https://future-fs-02-three-liard.vercel.app/",
     },
     {
       title: "Espresso Voila",
@@ -31,6 +32,7 @@ function Projects() {
       github: "https://github.com/gloriasemyol/FUTURE_FS_03",
       modalType: "video",
       driveLink: "https://drive.google.com/open?id=1RzsDt5sEttuHNmKGMNLKQlf91-HBWxdA&usp=drive_copy",
+      liveLink: "https://future-fs-03-one-ruby.vercel.app/",
     },
     {
       title: "DocSign Web App",
@@ -40,6 +42,7 @@ function Projects() {
       github: "https://github.com/gloriasemyol/docsign-app",
       modalType: "video",
       driveLink: "https://drive.google.com/open?id=1nlxjcS5jC3PtbcqU2kx9zFFY0Ham5kof&usp=drive_copy",
+      liveLink: "https://docsign-app-gilt.vercel.app/",
     },
     {
       title: "AI Code Review",
@@ -49,6 +52,7 @@ function Projects() {
       github: "https://github.com/gloriasemyol/ai-code-review-assistant",
       modalType: "video",
       driveLink: "https://drive.google.com/open?id=1jnXzIY4M9lzCi9KCqI6jY0U6b5vMmTuh&usp=drive_copy",
+      liveLink: "https://ai-code-review-assistant-mo2m-azure.vercel.app/",
     },
     {
       title: "Prodigy Projects",
@@ -82,7 +86,7 @@ function Projects() {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.title}
               </h3>
-              <p className="text-base text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+              <p className="text-sm font-lora text-gray-600 dark:text-gray-400 mb-4 flex-grow">
                 {project.description}
               </p>
 
@@ -147,7 +151,7 @@ function Projects() {
                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-base font-lora leading-relaxed">
                   You're looking at it right now! This very portfolio website
                   you're browsing is the live demo of this project — built
                   from scratch with React, Vite, and Tailwind CSS.
@@ -167,12 +171,12 @@ function Projects() {
                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-base font-lora leading-relaxed mb-6">
                   These are five separate full-stack projects built during my
                   Prodigy InfoTech internship. Visit my GitHub to explore each
                   one's source code, README, and setup instructions.
                 </p>
-                
+
                 <a
                   href={selectedProject.github}
                   target="_blank"
@@ -190,21 +194,34 @@ function Projects() {
                 <div className="w-16 h-16 bg-violet-100 dark:bg-violet-900/40 text-violet-600 dark:text-violet-300 rounded-full flex items-center justify-center mx-auto mb-4">
                   <PlayCircle size={32} />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-6">
+                <p className="text-gray-600 dark:text-gray-300 text-sm font-lora leading-relaxed mb-6">
                   {selectedProject.description}
                 </p>
-                
-                <a
-                  href={selectedProject.driveLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium text-base shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
-                >
-                  <PlayCircle size={18} /> Click to Watch Demo Video
-                </a>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href={selectedProject.driveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium shadow-lg shadow-violet-300/50 dark:shadow-violet-900/50 hover:scale-105 transition-transform"
+                  >
+                    <PlayCircle size={18} /> Click to Watch Demo Video
+                  </a>
+
+                  {selectedProject.liveLink &&
+                    !selectedProject.liveLink.includes("PASTE_YOUR") && (
+                      <a
+                        href={selectedProject.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-violet-600 text-violet-600 dark:text-violet-400 dark:border-violet-400 font-medium hover:bg-violet-50 dark:hover:bg-violet-900/30 transition-colors"
+                      >
+                        <ExternalLink size={18} /> Click to Experience Live Project
+                      </a>
+                    )}
+                </div>
               </>
             )}
           </div>

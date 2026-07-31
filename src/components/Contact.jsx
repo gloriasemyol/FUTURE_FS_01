@@ -52,7 +52,7 @@ function Contact() {
             Touch
           </span>
         </h2>
-        <p className="text-lg text-gray-500 dark:text-gray-400 mb-10">
+        <p className="text-lg font-lora text-gray-500 dark:text-gray-400 mb-10">
           Have a project in mind, an opportunity, or just want to say hi? My
           inbox is always open.
         </p>

@@ -13,20 +13,20 @@ function About() {
         </h2>
 
         <div className="space-y-5 text-left md:text-center">
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg font-lora text-gray-600 dark:text-gray-300 leading-relaxed">
             Hi, I'm Gloria S — a Full Stack Web Development intern passionate about
             building clean, functional, and user-friendly web applications. I started
             as a complete beginner and have since built multiple full-stack projects,
             including authentication systems, e-commerce platforms, real-time chat apps,
             and social media platforms.
           </p>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg font-lora text-gray-600 dark:text-gray-300 leading-relaxed">
             I'm currently interning at <span className="font-semibold text-violet-600 dark:text-violet-400">Future Interns</span>,
             where I'm building this very portfolio as my first project. I love learning
             new technologies, solving problems, and turning ideas into working products —
             one project at a time.
           </p>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg font-lora text-gray-600 dark:text-gray-300 leading-relaxed">
             My goal is to keep growing as a developer, contribute to real-world
             applications, and eventually work on products that make a genuine difference
             for the people who use them.

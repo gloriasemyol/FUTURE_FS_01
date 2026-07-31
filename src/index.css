@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-lora: "Lora", serif;
+}
+
 html {
   scroll-behavior: smooth;
 }

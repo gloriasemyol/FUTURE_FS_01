@@ -39,7 +39,7 @@ function Hero() {
       </h2>
 
       {/* Short Bio */}
-      <p className="relative z-10 max-w-2xl text-lg text-gray-500 dark:text-gray-400 mb-8">
+      <p className="relative z-10 max-w-2xl text-lg font-lora text-gray-500 dark:text-gray-400 mb-8">
         I build clean, responsive, and user-friendly web applications using
         React, Node.js, and MongoDB. Currently building real-world projects
         as a Full Stack Intern at Future Interns.
