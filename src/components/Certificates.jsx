@@ -36,7 +36,7 @@ const certificates = [
     description:
       "Secured 2nd place out of numerous participants in Academicia, a competitive science and technology program organized by the College Science Association. The rigorous multi-tier event comprised three challenging rounds featuring complex technical and scientific assessments, where my strong analytical skills, problem-solving abilities, and comprehensive knowledge domain enabled me to successfully outperform the majority of competitors and earn runner-up recognition.",
     links: [
-      { label: "Certificate", url: "https://drive.google.com/open?id=1XewBF27wUQ6KMV796xxvJELP1NjXbNPd&usp=drive_copy" },
+      { label: "Certificate of Achievement", url: "https://drive.google.com/open?id=1XewBF27wUQ6KMV796xxvJELP1NjXbNPd&usp=drive_copy" },
     ],
   },
 ];
