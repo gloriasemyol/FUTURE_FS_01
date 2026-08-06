@@ -7,7 +7,7 @@ const certificates = [
     description:
       "Built 5 full-stack projects during this internship — a Secure User Authentication system, Employee Management System, Local Store E-commerce Platform, Real-Time Chat Application, and Social Media Platform — using modern MERN stack technologies and responsive front-end interfaces. Recognized with a certificate of completion and a letter of recommendation for consistent performance throughout the program.",
     links: [
-      { label: "Certificate of Completion", url: "https://drive.google.com/open?id=1Lq92euRXeaE91TWHD5fzjygNqyBWF7n4&usp=drive_copy" },
+      { label: "Certificate of Completion", url: "https://drive.google.com/open?id=1OigmX9VZ8XbDO9Awe0CWGilgsIjMi3we&usp=drive_copy" },
       { label: "Letter of Recommendation", url: "https://drive.google.com/open?id=1M3EAsgig7lrVCkaaqzQo-t8o0EOt1Df8&usp=drive_copy" },
     ],
   },
@@ -17,7 +17,7 @@ const certificates = [
     description:
       "Developed 3 full-stack web applications during this internship — a Personal Professional Portfolio, a Mini CRM, and a Café Website — focusing on secure RESTful APIs and optimized database integration.",
     links: [
-      { label: "Certificate of Completion", url: "https://drive.google.com/open?id=1OigmX9VZ8XbDO9Awe0CWGilgsIjMi3we&usp=drive_copy" },
+      { label: "Certificate of Completion", url: "https://drive.google.com/open?id=1Lq92euRXeaE91TWHD5fzjygNqyBWF7n4&usp=drive_copy" },
       { label: "Letter of Recommendation", url: "https://drive.google.com/open?id=10nhgbA27ih1ENhpV34tXBoP5fIPOpXyC&usp=drive_copy" },
     ],
   },
