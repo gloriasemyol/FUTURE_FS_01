@@ -21,8 +21,8 @@ function About() {
             and social media platforms.
           </p>
           <p className="text-lg font-lora text-gray-600 dark:text-gray-300 leading-relaxed">
-            I'm currently interning at <span className="font-semibold text-violet-600 dark:text-violet-400">Future Interns</span>,
-            where I'm building this very portfolio as my first project. I love learning
+            I have currently interned at <span className="font-semibold text-violet-600 dark:text-violet-400">Prodigy InfoTech</span> and <span className="font-semibold text-violet-600 dark:text-violet-400">Future Interns</span>,
+            where I have built many real-world projects including this very portfolio as my first project. I love learning
             new technologies, solving problems, and turning ideas into working products —
             one project at a time.
           </p>

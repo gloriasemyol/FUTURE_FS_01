@@ -3,7 +3,7 @@ import { Award, ExternalLink, FileCheck2 } from "lucide-react";
 const certificates = [
   {
     title: "Prodigy InfoTech",
-    subtitle: "Web Development Internship",
+    subtitle: "Full Stack Web Development Internship",
     description:
       "Built 5 full-stack projects during this internship — a Secure User Authentication system, Employee Management System, Local Store E-commerce Platform, Real-Time Chat Application, and Social Media Platform — using modern MERN stack technologies and responsive front-end interfaces. Recognized with a certificate of completion and a letter of recommendation for consistent performance throughout the program.",
     links: [
@@ -19,6 +19,24 @@ const certificates = [
     links: [
       { label: "Certificate of Completion", url: "https://drive.google.com/open?id=1Lq92euRXeaE91TWHD5fzjygNqyBWF7n4&usp=drive_copy" },
       { label: "Letter of Recommendation", url: "https://drive.google.com/open?id=10nhgbA27ih1ENhpV34tXBoP5fIPOpXyC&usp=drive_copy" },
+    ],
+  },
+  {
+    title: "ICSISCDR@24",
+    subtitle: "International Conference on Sustainable and Innovative Solutions in Cross-Disciplinary Research",
+    description:
+      "During my second year of undergraduate studies in Computer Science, I actively participated in the 2-day International Conference on Sustainable and Innovative Solutions in Cross-Disciplinary Research (ICSISCDR@24). This immersive experience broadened my technical perspective by bridging core computer science principles with sustainable, cross-disciplinary problem-solving, enhancing my understanding of how modern technology drives innovative research and real-world impact.",
+    links: [
+      { label: "Certificate of Completion", url: "https://drive.google.com/open?id=12diI8HQdOLVUGo9zXpyK5fRcQPHlf9GV&usp=drive_copy" },
+    ],
+  },
+  {
+    title: "Academicia",
+    subtitle: "a competitive science and technology program",
+    description:
+      "Secured 2nd place out of numerous participants in Academicia, a competitive science and technology program organized by the College Science Association. The rigorous multi-tier event comprised three challenging rounds featuring complex technical and scientific assessments, where my strong analytical skills, problem-solving abilities, and comprehensive knowledge domain enabled me to successfully outperform the majority of competitors and earn runner-up recognition.",
+    links: [
+      { label: "Certificate", url: "https://drive.google.com/open?id=1XewBF27wUQ6KMV796xxvJELP1NjXbNPd&usp=drive_copy" },
     ],
   },
 ];
