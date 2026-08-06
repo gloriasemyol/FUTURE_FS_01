@@ -88,7 +88,7 @@ function Skills() {
                       className="flex items-center gap-3 p-3 rounded-xl bg-violet-50 dark:bg-[#150c28] hover:scale-105 transition-transform"
                     >
                       <Icon className={`w-7 h-7 ${skill.color}`} />
-                      <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+                      <span className="text-base font-semibold text-gray-700 dark:text-gray-200">
                         {skill.name}
                       </span>
                     </div>
